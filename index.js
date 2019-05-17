@@ -1,14 +1,16 @@
 // Import a library to help create a component
 import React from 'react';
-import { AppRegistry }  from 'react-native';
+import { AppRegistry, View } from 'react-native';
 import Header from './src/components/header';
+import AlbumList from './src/components/AlbumList';
 
-//create component
+// Create a component
 const App = () => (
-    //this is JSX and follows same semantics of HTML
-    <Header headerText={'Albums'}/>
-  );
+  <View style={{ flex: 1 }}>
+    <Header headerText={'Albums'} />
+    <AlbumList />
+  </View>
+);
 
-//render component to a device
-//returns app even thoug don't have a return key wor
+// Render it to the device
 AppRegistry.registerComponent('albums', () => App);
